@@ -18,9 +18,11 @@ int main(){
         vec.push_back(x);
     }
     // reverse 
-    //std::reverse(vec.begin(), vec.end());
+    std::reverse(vec.begin(), vec.end());
+
     // manual reverse
-    manual_reverse(vec);
+    //manual_reverse(vec);
+
     for(int num : vec){
         std::cout<< num <<" ";
     }
