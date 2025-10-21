@@ -14,6 +14,7 @@ int main(){
     // }
     // prealocation a  bit faster
     std::vector<int> vec(n); // creates a vector with length n but filled with 0s, so preallocate
+    // pre increment is faster in cases of iterators in vectors
     for(int i =0; i < vec.size(); ++i){
         std::cin>> vec[i];
     }
