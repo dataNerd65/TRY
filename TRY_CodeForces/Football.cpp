@@ -18,10 +18,11 @@ int main(){
             if(count >= 7){
                 std::cout<<"YES\n";
                 return 0;
-            }else{
-                count = 1;
-                prev = c;
             }
+        }
+        else{
+            count = 1;
+            prev = c;
         }
     }
     std::cout<<"NO\n";
