@@ -155,3 +155,5 @@ O. Calculator
 W. Mathematical Expression
 V. Comparison
 ## A must do
+
+ALSO DO static_cast<>() function from cmath
