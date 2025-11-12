@@ -86,7 +86,28 @@ int main(){
 
 	divisorCount = getCountDivisors(vec, n);
 
+	int Max = *std::max_element(divisorCount.begin(), divisorCount.end());
+
+	int idx = std::find(divisorCount.begin(), divisorCount.end(), Max) - divisorCount.begin();
 	
+
+	int first = divisorCount[idx];
+	int Dcount = 0;
+
+	int index;
+	for(int i = 0; i < n; ++i){
+		if(divisorCount[i] == first){
+			Dcount++;
+			if(Dcount == 2){
+				index = i; // second number
+			}
+		}
+	}
+	if(Dcount == 1){
+		std::cout<<"The number that has the maximum number of divisors : "<<vec[idx]<<"\n";
+	}else{
+		std::cout<<"The number that has the maximum number of divisors : "<<std::max(vec[idx], vec[index])<<"\n";
+	}
 
 	return 0;
 }
