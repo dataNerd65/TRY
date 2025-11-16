@@ -13,29 +13,7 @@ int main(){
 	std::cin>>str1;
 	std::cin>>str2;
 
-	bool islexicographic = true;
-	bool islexicographic2 = true;
-
-	for(int i= 1; i < str1.size(); ++i){
-		if(str1[i] < str1[i - 1]) 
-			islexicographic = false;
-	}
-	for(int i= 1; i < str2.size(); ++i){
-		if(str2[i] < str2[i - 1]) 
-			islexicographic2 = false;
-	}
-
-	if(islexicographic && islexicographic2 && str1.size() < str2.size()){
-		std::cout<<str1<<"\n";
-	}else if(islexicographic && islexicographic2 && str1.size() > str2.size()){
-		std::cout<<str2<<"\n";
-	}else if(islexicographic && !islexicographic2){
-		std::cout<<str1<<"\n";
-	}else if(!islexicographic && islexicographic2){
-		std::cout<<str2<<"\n";
-	}
-
-
+	std::cout<<std::min(str1, str2)<<"\n";
 
 	return 0;
 }
