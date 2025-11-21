@@ -26,8 +26,10 @@ void solve(){
 	std::deque<int> dq;
 
 	for(int i = 0; i < n; ++i){
+		
 		while(!dq.empty() && dq.front() <= i - k)
 			dq.pop_front();
+		
 		while(!dq.empty() && vec[dq.back()] >= vec[i])
 			dq.pop_back();
 
@@ -38,6 +40,7 @@ void solve(){
 			xored ^= mn;
 		}
 	}
+
 	std::cout<<xored<<"\n";
 
 }
