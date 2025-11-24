@@ -26,17 +26,19 @@ void solve(){
 	std::deque<int> dq;
 
 	for(int i = 0; i < n; ++i){
-		
+		// remove elements outside window
 		while(!dq.empty() && dq.front() <= i - k)
 			dq.pop_front();
-		
+		//Remove bigger elements from the back
 		while(!dq.empty() && vec[dq.back()] >= vec[i])
 			dq.pop_back();
 
+		// Add new index
 		dq.push_back(i);
 
+		// when we have a ful window get the minimum
 		if(i >= k - 1){
-			ll mn = vec[dq.front()];
+			ll mn = vec[dq.front()]; // front is smallest
 			xored ^= mn;
 		}
 	}
